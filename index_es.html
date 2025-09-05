@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saúl Huamán Alvarado — Analista de Datos Junior</title>
+  <meta name="description" content="Analista de Datos Junior. Python · SQL · Power BI. Limpieza, EDA e insights de negocio. Online Retail Analytics (1M+ filas) y más." />
+  <link rel="canonical" href="https://saul1832.github.io/index_es.html" />
+  <link rel="alternate" hreflang="en" href="https://saul1832.github.io/" />
+  <link rel="alternate" hreflang="es" href="https://saul1832.github.io/index_es.html" />
+  <link rel="alternate" hreflang="fr" href="https://saul1832.github.io/index_fr.html" />
+  <link rel="alternate" hreflang="x-default" href="https://saul1832.github.io/" />
+  <meta name="color-scheme" content="dark light">
+
+  <!-- OG/Twitter -->
+  <meta property="og:title" content="Saúl Huamán Alvarado — Analista de Datos Junior" />
+  <meta property="og:description" content="Python · SQL · Power BI | Online Retail Analytics (1M+ filas)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/preview.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Saúl Huamán Alvarado — Analista de Datos Junior" />
+  <meta name="twitter:description" content="Python · SQL · Power BI | Online Retail Analytics (1M+ filas)." />
+  <meta name="twitter:image" content="assets/preview.jpg" />
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <meta name="theme-color" content="#0b1220">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- ===== Analytics (DESACTIVADO por defecto) =====
+       ► Google Analytics 4 (gtag.js)
+       Para ACTIVAR: reemplaza G-XXXXXXXXXX por tu Measurement ID y quita los comentarios.
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX'); // Reemplaza con tu ID
+  </script>
+  -->
+
+  <!-- ===== Plausible ===== -->
+  <script defer data-domain="saul1832.github.io" src="https://plausible.io/js/script.file-downloads.outbound-links.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+  <style>
+    /* ===== THEME ===== */
+    :root{
+      --bg:#0b1220; --panel:#0f172a; --card:#111827;
+      --muted:#94a3b8; --text:#e5e7eb;
+      --brand:#0ea5e9; --brand-2:#22d3ee;
+      --shadow:0 10px 30px rgba(2,6,23,.65);
+      --radius:16px; --border: rgba(148,163,184,.20);
+      --panelGlass: rgba(11,18,32,.55);
+    }
+    :root[data-theme="light"]{
+      --bg:#f9fafb; --panel:#ffffff; --card:#f3f4f6;
+      --muted:#374151; --text:#0f172a;
+      --brand:#0284c7; --brand-2:#06b6d4;
+      --shadow:0 10px 24px rgba(2,6,23,.08);
+      --border: rgba(17,24,39,.12); --panelGlass: rgba(255,255,255,.75);
+    }
+    @media (prefers-color-scheme: light){
+      :root:not([data-theme]){
+        --bg:#f9fafb; --panel:#ffffff; --card:#f3f4f6;
+        --muted:#374151; --text:#0f172a;
+        --brand:#0284c7; --brand-2:#06b6d4;
+        --shadow:0 10px 24px rgba(2,6,23,.08);
+        --border: rgba(17,24,39,.12); --panelGlass: rgba(255,255,255,.75);
+      }
+    }
+
+    /* ===== BASE ===== */
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1080px;margin:0 auto;padding:24px}
+    .sr-only{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+
+    header{position:sticky;top:0;z-index:10;backdrop-filter:blur(10px);background:var(--panelGlass);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{font-weight:700;letter-spacing:.3px;background:linear-gradient(90deg,var(--brand),var(--brand-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:999px;background:var(--card);color:var(--text);border:1px solid var(--border);transition:.18s ease;box-shadow:var(--shadow)}
+    .btn:hover{transform:translateY(-1px);border-color:var(--brand-2);box-shadow:0 10px 30px rgba(14,165,233,.25)}
+    .btn.primary{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#06121e;font-weight:700}
+    .btn.icon-only{padding:10px;min-width:42px;justify-content:center}
+
+    .hero{padding:64px 0 32px;display:grid;gap:24px}
+    .hero h1{font-size:clamp(28px,3.2vw,40px);margin:0 0 10px}
+    .tagline{color:var(--muted);max-width:750px;line-height:1.6}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+
+    .subtitle {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.2px;
+      margin-top: -6px;
+      margin-bottom: 4px;
+    }
+
+    /* Project buttons */
+    .project .cta{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+    .project .cta::-webkit-scrollbar{display:none}
+    .project .cta .btn{white-space:nowrap;flex-shrink:0;padding:8px 14px;font-size:14px}
+    @media (max-width:600px){.project .cta{flex-wrap:wrap}}
+
+    section{margin:40px 0 20px}
+    .section-title{font-size:20px;opacity:.95;margin-bottom:14px;letter-spacing:.4px}
+
+    .card{background:linear-gradient(180deg,var(--panel),rgba(0,0,0,.06));border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .grid{display:grid;gap:16px}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:900px){.grid.cols-2{grid-template-columns:1fr}}
+
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:inherit;background:color-mix(in oklab,var(--panel) 85%,#0c1627 15%);font-size:13px;line-height:1}
+    .pill img,.pill svg{width:18px;height:18px;display:inline-block;vertical-align:middle}
+    .pills{display:flex;flex-wrap:wrap;gap:8px}
+
+    /* Language picker */
+    details.lang{position:relative}
+    details.lang summary{list-style:none;cursor:pointer}
+    details.lang summary::-webkit-details-marker{display:none}
+    details.lang .menu{position:absolute;right:0;top:calc(100% + 8px);background:var(--panel);border:1px solid var(--border);border-radius:12px;box-shadow:var(--shadow);padding:6px;min-width:140px}
+    details.lang .menu a{display:block;padding:8px 10px;border-radius:8px}
+    details.lang .menu a:hover{background:rgba(14,165,233,.15)}
+
+    /* Featured project */
+    .card.project{overflow:hidden;position:relative}
+    .project{display:grid;gap:20px;grid-template-columns:1fr auto;align-items:center}
+    .project h3{margin:0}
+    .project__media{justify-self:end;align-self:center;width:clamp(300px,34vw,420px);aspect-ratio:16/9;background:#0b0f1a;border-radius:14px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.25);overflow:hidden;cursor:zoom-in}
+    .project__media img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+    @media (max-width:900px){.project{grid-template-columns:1fr}.project__media{justify-self:stretch;width:100%}}
+
+    /* Icons (contact) */
+    .icon{width:18px;height:18px;display:inline-block}
+    .icon svg{width:18px;height:18px;display:block}
+
+    /* About */
+    .about-content{line-height:1.7;font-size:15px}
+    .about-content p{margin-bottom:16px}
+    .about-content p:last-child{margin-bottom:0}
+
+    /* Subsection titles inside cards (Skills) */
+    .subsection{margin-bottom:10px;font-weight:700;opacity:.95}
+    .subgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    @media (max-width:700px){.subgrid{grid-template-columns:1fr}}
+
+    footer{margin:56px 0 20px;color:var(--muted);font-size:14px;text-align:center}
+    .muted{color:var(--muted)}
+    .list{margin:6px 0 0 16px}
+
+    /* Lightbox */
+    .lightbox{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.75);padding:24px}
+    .lightbox.open{display:flex}
+    .lightbox__content{max-width:min(1200px,95vw);max-height:90vh;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);background:#000;position:relative}
+    .lightbox__content img{display:block;width:100%;height:auto;object-fit:contain;background:#000}
+    .lightbox__close{position:absolute;top:8px;right:8px;border:none;background:rgba(255,255,255,.15);color:#fff;padding:6px 10px;border-radius:999px;cursor:pointer;backdrop-filter:blur(4px)}
+    .lightbox__close:hover{background:rgba(255,255,255,.25)}
+
+    /* ===== Contact right column as flex (languages up, location aligned with buttons) ===== */
+    .contact-right{display:flex;flex-direction:column;justify-content:space-between}
+    .lang-box{border:1px solid var(--border);border-radius:12px;padding:12px;background:linear-gradient(180deg,var(--panel),rgba(0,0,0,.04))}
+    .lang-box h3{margin:0 0 8px;font-size:14px;opacity:.85}
+    .lang-list{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+    .lang-item{display:flex;align-items:center;gap:8px}
+    .flag{width:18px;height:18px;display:inline-block;line-height:1}
+
+    /* ==== Anchors ==== */
+    :root { --anchor-offset: 48px; }          /* ajusta a la altura real del header */
+    html { 
+      scroll-behavior: smooth; 
+      scroll-padding-top: var(--anchor-offset);
+    }
+    section[id], h2.section-title { 
+      scroll-margin-top: var(--anchor-offset);
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Saúl Huamán Alvarado","jobTitle":"Junior Data Analyst","url":"https://saul1832.github.io/","sameAs":["https://github.com/saul1832","https://www.linkedin.com/in/saulha/"]}
+  </script>
+</head>
+<body>
+  <a class="sr-only" href="#projects">Saltar al contenido</a>
+
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#">Saúl Huamán Alvarado</a>
+      <nav class="links" aria-label="Principal">
+        <a href="#projects">Proyectos</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#contact" class="btn">Contacto</a>
+        <details class="lang">
+          <summary class="btn" aria-haspopup="true" aria-expanded="false">🇪🇸 ES</summary>
+          <div class="menu" role="menu" aria-label="Idioma">
+            <a role="menuitem" href="index.html">🇺🇸 English</a>
+            <a role="menuitem" href="index_es.html">🇪🇸 Español</a>
+            <a role="menuitem" href="index_fr.html">🇫🇷 Français</a>
+          </div>
+        </details>
+        <button class="btn icon-only" id="themeToggle" aria-label="Cambiar tema de color">🌓</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Analista de Datos Junior — Python · SQL · Power BI</h1>
+      <p class="subtitle">
+        Combino habilidades técnicas con una sólida base financiera para ofrecer insights accionables que mejoran la toma de decisiones.
+      </p>
+      <p class="tagline">Analista autodidacta enfocado en convertir datos en insights de negocio. Experiencia limpiando y explorando <strong>datasets grandes (1M+ filas)</strong>, escribiendo <strong>SQL (CTEs)</strong> y construyendo <strong>dashboards interactivos en Power BI</strong>. Experiencia previa en control presupuestal y reportes financieros.</p>
+      <div class="cta">
+	  <div class="cta">
+		<a class="btn primary" href="#projects">
+		<span class="icon" aria-hidden="true">
+		<!-- Folder/project icon -->
+		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+			<path d="M3 7h6l2 2h10v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+			<path d="M3 7V5a2 2 0 0 1 2-2h6l2 2"/>
+		</svg>
+		</span>
+		Ver proyectos
+		</a>
+
+		<a class="btn" href="assets/CV_Saul_Huaman_Alvarado_ES.pdf" target="_blank" rel="noopener">
+		<span class="icon" aria-hidden="true">
+		<!-- Document/CV icon -->
+		<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+			<path d="M6 2h9l5 5v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/>
+			<path d="M14 2v6h6"/>
+		</svg>
+		</span>
+		Descargar CV
+		</a>
+
+		<a class="btn" href="https://www.linkedin.com/in/saulha/" target="_blank" rel="noopener">
+			<span class="icon" aria-hidden="true">
+		<!-- LinkedIn logo -->
+		<svg viewBox="0 0 24 24" fill="currentColor">
+			<path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.5h4.9V24H.5zM9 8.5h4.7v2.1h.1c.7-1.3 2.4-2.6 4.9-2.6 5.2 0 6.2 3.4 6.2 7.8V24h-5V16c0-1.9 0-4.3-2.6-4.3-2.6 0-3 2-3 4.1V24H9z"/>
+		</svg>
+		</span>
+		LinkedIn
+		 </a>
+
+		<a class="btn" href="https://github.com/saul1832" target="_blank" rel="noopener">
+		<span class="icon" aria-hidden="true">
+		<!-- GitHub logo -->
+		<svg viewBox="0 0 24 24" fill="currentColor">
+			<path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 2 .7 2 1.8.3 2.7-1.2 2.7-1.2.2-.8.6-1.3 1-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.6.5 1.1 1.4 1.1 2.8v4.1c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/>
+		</svg>
+		</span>
+		GitHub
+		 </a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Proyecto destacado</h2>
+      <div class="card project">
+        <div>
+          <h3>Online Retail Analytics — Python, SQL & Power BI</h3>
+          <p class="muted">Pipeline completo: limpieza de datos, EDA, agregaciones SQL (CTEs) y un dashboard interactivo en Power BI con parámetros de campo (alternar Ventas Brutas/Ventas Netas/Devoluciones). Si es necesario, actualiza la ruta del origen de datos en Power BI (<em>Transformar datos → Configuración de origen de datos</em>).</p>
+          <div class="pills" style="margin:8px 0 10px;">
+            <span class="pill">1,054,675 filas · 15 columnas</span>
+            <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="">Python (Pandas · NumPy · Matplotlib/Seaborn)</span>
+            <span class="pill"><svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v10c0 1.7 4 3 9 3s9-1.3 9-3V5" fill="currentColor"></path></svg>SQL (SQLite · SQLAlchemy · CTEs)</span>
+            <span class="pill"><svg viewBox="0 0 24 24"><path fill="#F2C811" d="M22 6v12a2 2 0 0 1-2 2H8.5a.5.5 0 0 1-.5-.5V7a1 1 0 0 1 1-1H21a1 1 0 0 1 1 1z"/><rect x="3" y="10" width="3" height="8" rx="1" fill="#F2C811"/><rect x="7" y="8" width="3" height="10" rx="1" fill="#D4AF0D"/><rect x="11" y="12" width="3" height="6" rx="1" fill="#B28E0B"/></svg>Power BI (DAX · slicers · parámetros)</span>
+          </div>
+          <ul class="list">
+            <li><strong>Concentración en Q4</strong> (regalos/decoración) — pico estacional clave.</li>
+            <li>Segmentación Reino Unido vs. resto del mundo; Reino Unido ≈ 85.70% de ventas brutas.</li>
+            <li>Clientes no identificados: 13.80% de ventas netas (calidad de datos).</li>
+            <li>Facturas de devolución: 15.79% — por debajo del 20% de referencia de la industria.</li>
+          </ul>
+          <div class="cta" style="margin-top:10px;">
+            <a class="btn primary" href="https://github.com/saul1832/online-retail-analytics" target="_blank" rel="noopener">Repo GitHub</a>
+			<a class="btn" href="https://github.com/saul1832/online-retail-analytics/blob/main/notebooks/02_ES_analisis_eda.ipynb" target="_blank" rel="noopener">Ver EDA</a>
+            <a class="btn" href="https://github.com/saul1832/online-retail-analytics/tree/main/reports" target="_blank" rel="noopener">Ver capturas</a>
+            <a class="btn" href="https://github.com/saul1832/online-retail-analytics/raw/main/powerbi/03_dashboard.pbix" target="_blank" rel="noopener">Descargar PBIX</a>
+          </div>
+        </div>
+        <figure class="project__media" id="mediaThumb" aria-label="Abrir imagen grande del dashboard" role="button" tabindex="0">
+          <img src="https://raw.githubusercontent.com/saul1832/online-retail-analytics/main/reports/2_Overview.jpg"
+               alt="Vista general del dashboard en Power BI" loading="lazy" decoding="async" width="1200" height="675"/>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section id="skills">
+      <h2 class="section-title">Habilidades y Herramientas</h2>
+      <div class="card">
+        <div class="subgrid">
+          <div>
+            <div class="subsection">Programación y Datos</div>
+            <div class="pills">
+              <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="">Python</span>
+              <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="">Pandas</span>
+              <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="">NumPy</span>
+              <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" alt="">Jupyter</span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="currentColor"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v10c0 1.7 4 3 9 3s9-1.3 9-3V5" fill="currentColor"></path></svg>
+                SQL
+              </span>
+              <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" alt="">SQLite · SQLAlchemy</span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-2 13-4-4 1.4-1.4L10 12.2l6.6-6.6L18 7l-8 8z"/></svg>
+                CTEs
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="subsection">Visualización y BI</div>
+            <div class="pills">
+              <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" alt="">Matplotlib</span>
+              <span class="pill"><img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="">Seaborn</span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24"><path fill="#F2C811" d="M22 6v12a2 2 0 0 1-2 2H8.5a.5.5 0 0 1-.5-.5V7a1 1 0 0 1 1-1H21a1 1 0 0 1 1 1z"/><rect x="3" y="10" width="3" height="8" rx="1" fill="#F2C811"/><rect x="7" y="8" width="3" height="10" rx="1" fill="#D4AF0D"/><rect x="11" y="12" width="3" height="6" rx="1" fill="#B28E0B"/></svg>
+                Power BI · DAX
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="subsection">Versionado y Flujo</div>
+            <div class="pills">
+              <span class="pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="">Git & GitHub</span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h6l2 2h10v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 7V5a2 2 0 0 1 2-2h6l2 2"/></svg>
+                Estructura de proyecto · README
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3z"/><path d="M7 9l3 3-3 3"/><path d="M13 15h4"/></svg>
+                Entorno virtual · requirements.txt
+              </span>
+            </div>
+          </div>
+
+          <div>
+            <div class="subsection">Otros</div>
+            <div class="pills">
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 20l4-4m0 0l3 3-4 4m1-9l9-9 3 3-9 9z"/></svg>
+                Limpieza de datos & QA
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                Análisis exploratorio (EDA)
+              </span>
+              <span class="pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7h18v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M7 15v-3M12 15v-5M17 15v-2"/></svg>
+                Experiencia en reportes financieros
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <h2 class="section-title">Sobre mí</h2>
+      <div class="card">
+        <div class="about-content">
+          <p>Mi camino en analítica de datos comenzó en <strong>General Electric</strong> (Finance Intern), donde automaticé flujos de trabajo en Excel para limpiar datos descargados desde servidores y generar reportes dinámicos de órdenes y ventas. Fue entonces cuando comprendí el poder de los datos para impulsar mejores decisiones.</p>
+          <p>En <strong>GrupoRPP</strong>, el conglomerado de medios líder del Perú, transformé datos financieros en insights accionables: reportes de gastos personalizados por área, análisis de costos con mayor nivel de detalle y automatizaciones que mejoraron la eficiencia y respaldaron la toma de decisiones estratégicas.</p>
+          <p>Viví y trabajé en <strong>Montreal (2022–2024)</strong>, colaborando con equipos multiculturales y bilingües. Esa experiencia fortaleció mi comunicación en inglés y francés, mi adaptabilidad y la gestión de stakeholders en entornos interculturales.</p>
+          <p>En <strong>2025</strong> profundicé en mi aprendizaje: Python (pandas, matplotlib, seaborn), SQL y Power BI; mientras seguía aprovechando mi experiencia internacional previa. Aporto una combinación de rigor financiero, curiosidad y mentalidad constructora.</p>
+          <p><strong>Lo que busco:</strong> un equipo orientado a datos donde pueda transformar información en bruto en un impacto tangible para el negocio, combinando profundidad analítica con ejecución práctica y orientada a resultados.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IDIOMAS ===== -->
+    <section id="languages">
+      <h2 class="section-title">Idiomas</h2>
+      <div class="card">
+        <div class="pills">
+          <span class="pill"><span aria-hidden="true">🇪🇸</span> Español (nativo)</span>
+          <span class="pill"><span aria-hidden="true">🇺🇸</span> Inglés (profesional)</span>
+          <span class="pill"><span aria-hidden="true">🇫🇷</span> Francés (profesional)</span>
+          <span class="pill"><span aria-hidden="true">🇧🇷</span> Portugués (intermedio)</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section id="contact">
+      <h2 class="section-title">Contacto</h2>
+      <div class="card grid cols-1">
+        <div>
+          <p class="muted">¡Hablemos! Escríbeme para roles, feedback o colaboración.</p>
+          <form class="grid" style="gap:10px;margin-top:10px"
+            action="https://getform.io/f/axozzpmb" 
+            method="POST">
+
+            <label class="sr-only" for="name">Nombre</label>
+            <input id="name" name="name" type="text" placeholder="Tu nombre" required
+              style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)">
+
+            <label class="sr-only" for="email">Correo</label>
+            <input id="email" name="email" type="email" placeholder="Tu correo" required
+              style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)">
+
+            <label class="sr-only" for="msg">Mensaje</label>
+            <textarea id="msg" name="message" rows="4" placeholder="Tu mensaje" required
+              style="padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card);color:var(--text)"></textarea>
+
+            <input type="hidden" name="_gotcha" style="display:none">
+
+            <button class="btn primary" type="submit">Enviar mensaje</button>
+          </form>
+
+          <p class="muted" style="margin-top:25px">O contáctame directamente:</p>
+          <div class="cta" style="margin-top:13px;">
+            <a class="btn" href="mailto:saul18_@hotmail.com" aria-label="Enviarme un correo">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
+              </span>
+              Envíame un correo
+            </a>
+            <a class="btn" target="_blank" rel="noopener" href="https://www.linkedin.com/in/saulha/" aria-label="Abrir mi perfil de LinkedIn">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.5 8.5h4.9V24H.5zM9 8.5h4.7v2.1h.1c.7-1.3 2.4-2.6 4.9-2.6 5.2 0 6.2 3.4 6.2 7.8V24h-5V16c0-1.9 0-4.3-2.6-4.3-2.6 0-3 2-3 4.1V24H9z"/></svg>
+              </span>
+              LinkedIn
+            </a>
+            <a class="btn" target="_blank" rel="noopener" href="https://github.com/saul1832" aria-label="Abrir mi perfil de GitHub">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 .1.7 2 .7 2 1.8.3 2.7-1.2 2.7-1.2.2-.8.6-1.3 1-1.6-2.6-.3-5.4-1.3-5.4-5.9 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.2 0 4.6-2.8 5.6-5.4 5.9.6.5 1.1 1.4 1.1 2.8v4.1c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg>
+              </span>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <p class="muted" style="margin-top:16px">
+          <strong>Ubicación:</strong> Lima (UTC−5) · Abierto a remoto y reubicación
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>© <span id="y"></span> Saúl Huamán Alvarado — Construido con ♥ y HTML/CSS puro. Hospedado en GitHub Pages.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Imagen del dashboard ampliada">
+    <div class="lightbox__content">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Cerrar imagen">✕</button>
+      <img id="lightboxImg" src="https://raw.githubusercontent.com/saul1832/online-retail-analytics/main/reports/2_Overview.jpg" alt="Power BI dashboard - versión grande" />
+    </div>
+  </div>
+
+  <script>
+    // Año
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Tema (init)
+    (function(){
+      const saved = localStorage.getItem('theme');
+      if(saved){ document.documentElement.dataset.theme = saved; }
+      else { document.documentElement.dataset.theme = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; }
+    })();
+    // Toggle
+    document.getElementById('themeToggle')?.addEventListener('click', () => {
+      const current = document.documentElement.dataset.theme;
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem('theme', next);
+    });
+
+    // Desplegable de idioma (a11y)
+    const lang = document.querySelector('details.lang');
+    const sum = lang?.querySelector('summary');
+    if(lang && sum){
+      lang.addEventListener('toggle', ()=> sum.setAttribute('aria-expanded', lang.open ? 'true' : 'false'));
+      document.addEventListener('click', e => { if(!lang.contains(e.target)) lang.open = false; });
+    }
+
+    // Lightbox
+    const thumb = document.getElementById('mediaThumb');
+    const lightbox = document.getElementById('lightbox');
+    const closeBtn = document.getElementById('lightboxClose');
+    function openLightbox(){ lightbox.classList.add('open'); lightbox.setAttribute('aria-hidden','false'); closeBtn.focus(); }
+    function closeLightbox(){ lightbox.classList.remove('open'); lightbox.setAttribute('aria-hidden','true'); thumb.focus(); }
+    thumb.addEventListener('click', openLightbox);
+    thumb.addEventListener('keydown', e => { if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openLightbox(); }});
+    closeBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if(e.target===lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if(e.key==='Escape' && lightbox.classList.contains('open')) closeLightbox(); });
+  </script>
+</body>
+</html>

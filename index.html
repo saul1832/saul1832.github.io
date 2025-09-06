@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Saúl Huamán Alvarado — Junior Data Analyst</title>
   <meta name="description" content="Junior Data Analyst. Python · SQL · Power BI. Cleaning, EDA and business insights. Online Retail Analytics (1M+ rows) and more." />
   <link rel="canonical" href="https://saul1832.github.io/" />
@@ -111,7 +111,7 @@
     }
 
     /* Project buttons */
-    .project .cta{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
+    .project .cta{flex-wrap:nowrap;overflow-x:auto;overflow-y:visible;padding:2px;scrollbar-width:none;-ms-overflow-style:none}
     .project .cta::-webkit-scrollbar{display:none}
     .project .cta .btn{white-space:nowrap;flex-shrink:0;padding:8px 14px;font-size:14px}
     @media (max-width:600px){.project .cta{flex-wrap:wrap}}
@@ -140,7 +140,7 @@
     .card.project{overflow:hidden;position:relative}
     .project{display:grid;gap:20px;grid-template-columns:1fr auto;align-items:center}
     .project h3{margin:0}
-    .project__media{justify-self:end;align-self:center;width:clamp(300px,34vw,420px);aspect-ratio:16/9;background:#0b0f1a;border-radius:14px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.25);overflow:hidden;cursor:zoom-in}
+    .project__media{justify-self:center;align-self:center;margin:0 auto 0 0;margin-right:20px;width:clamp(300px,34vw,420px);aspect-ratio:16/9;background:#0b0f1a;border-radius:14px;border:1px solid var(--border);box-shadow:0 8px 24px rgba(0,0,0,.25);overflow:hidden;cursor:zoom-in}
     .project__media img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
     @media (max-width:900px){.project{grid-template-columns:1fr}.project__media{justify-self:stretch;width:100%}}
 
@@ -179,14 +179,42 @@
     .flag{width:18px;height:18px;display:inline-block;line-height:1}
 
     /* ==== Anchors ==== */
-    :root { --anchor-offset: 48px; }          /* ajusta a la altura real del header */
+    :root { --anchor-offset: 96px; }          /* ajusta a la altura real del header */
     html { 
       scroll-behavior: smooth; 
       scroll-padding-top: var(--anchor-offset);
     }
     section[id], h2.section-title { 
       scroll-margin-top: var(--anchor-offset);
+	
+	
+	/* iOS: avoid auto-zoom/reflow */
+	html { -webkit-text-size-adjust: 100%; }
+	body { overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+	/* Hero 100% */
+	.hero { min-height: 100dvh; }
+
+	/* Safe Header with notch */
+	header { padding-top: env(safe-area-inset-top); }
+
+	/* Images/iframes auto width and height */
+	img, svg, video, canvas, iframe { max-width: 100%; height: auto; display: block; }
+
+	/* Inputs 16px */
+	input, select, textarea { font-size: 16px; font-family: inherit; }  
     }
+	
+	/* Expand/Collapse Button */
+	.about-extra {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease;
+	}
+
+	.about-actions {
+	margin-top: 10px;
+	}
   </style>
 
   <script type="application/ld+json">
@@ -202,7 +230,7 @@
       <nav class="links" aria-label="Primary">
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#about">About</a>
+        <a href="#about">About Me</a>
         <a href="#contact" class="btn">Contact</a>
         <details class="lang">
           <summary class="btn" aria-haspopup="true" aria-expanded="false">🇺🇸 EN</summary>
@@ -380,14 +408,24 @@
 
     <!-- ===== ABOUT ===== -->
     <section id="about">
-      <h2 class="section-title">About</h2>
+      <h2 class="section-title">About Me</h2>
       <div class="card">
         <div class="about-content">
+		  <p>I’m passionate about transforming raw data into clear insights that drive smarter decisions. With a mix of technical skills and financial background, I enjoy exploring datasets, finding patterns, and <strong>building solutions that connect numbers with business impact</strong>.</p>
+		 <!-- Collapse -->
+		 <div class="about-extra" id="aboutExtra" aria-hidden="true">
           <p>My path in data analytics began at <strong>General Electric</strong> (Finance Intern), where I automated Excel workflows to clean server-downloaded data and build dynamic order and sales reports. That’s when I realized the power of data to drive better decisions.</p>
           <p>At <strong>GrupoRPP</strong>, Peru’s leading media conglomerate, I transformed financial data into actionable insights: customized expense reports by department, drill-down cost analyses, and automations that improved efficiency and supported strategic decision-making.</p>
           <p>I lived and worked in <strong>Montreal (2022–2024)</strong>, collaborating with multicultural, bilingual teams. That experience strengthened my English and French communication, adaptability, and stakeholder management in cross-cultural environments.</p>
           <p>In <strong>2025</strong> I deepened my learning: Python (pandas, matplotlib, seaborn), SQL, and Power BI; while continuing to leverage that prior international experience. I bring a combination of financial rigor, curiosity, and a builder mindset.</p>
           <p><strong>What I’m looking for:</strong> a data-driven team where I can turn raw data into tangible business impact, combining analytical depth with practical, results-oriented execution.</p>
+		 </div>
+		 <!-- Button -->
+		<div class="about-actions">
+        <button class="btn" id="aboutToggle" aria-controls="aboutExtra" aria-expanded="false" type="button">
+          Read more
+        </button>
+      </div>
         </div>
       </div>
     </section>
@@ -435,7 +473,7 @@
 
           <p class="muted" style="margin-top:25px">Or reach me directly:</p>
           <div class="cta" style="margin-top:13px;">
-            <a class="btn" href="mailto:saul18_@hotmail.com" aria-label="Send me an email">
+            <a class="btn" href="mailto:saul.1832@gmail.com" aria-label="Send me an email">
               <span class="icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg>
               </span>
@@ -515,6 +553,40 @@
     closeBtn.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', e => { if(e.target===lightbox) closeLightbox(); });
     document.addEventListener('keydown', e => { if(e.key==='Escape' && lightbox.classList.contains('open')) closeLightbox(); });
+	
+	// Expand/Collapse
+	const aboutExtra  = document.getElementById('aboutExtra');
+	const aboutToggle = document.getElementById('aboutToggle');
+
+	function collapseAbout(){
+	aboutExtra.style.maxHeight = 0;
+	aboutExtra.setAttribute('aria-hidden','true');
+	aboutToggle.setAttribute('aria-expanded','false');
+	aboutToggle.textContent = 'Read more'; // Adaptable
+	}
+
+	function expandAbout(){
+	aboutExtra.style.maxHeight = aboutExtra.scrollHeight + 'px';
+	aboutExtra.setAttribute('aria-hidden','false');
+	aboutToggle.setAttribute('aria-expanded','true');
+	aboutToggle.textContent = 'Read less'; // Adaptable
+	}
+
+	// Initial state
+	collapseAbout();
+
+	// Toggle
+	aboutToggle.addEventListener('click', () => {
+	const expanded = aboutToggle.getAttribute('aria-expanded') === 'true';
+	expanded ? collapseAbout() : expandAbout();
+	});
+
+	// Adjust to window
+	window.addEventListener('resize', () => {
+	if(aboutToggle.getAttribute('aria-expanded') === 'true'){
+    aboutExtra.style.maxHeight = aboutExtra.scrollHeight + 'px';
+	}
+	});
   </script>
 </body>
 </html>
